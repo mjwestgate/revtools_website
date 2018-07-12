@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: revtools
-description: Evidence Synthesis in R
+description: Tools for Evidence Synthesis in R
 logo: assets/img/revtools_hex.png
 google_analytics: true
 exclude: ["README.md"]

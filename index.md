@@ -1,7 +1,7 @@
 ---
 layout: default
 title: revtools
-description: Evidence Synthesis in R
+description: Tools for Evidence Synthesis in R
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
