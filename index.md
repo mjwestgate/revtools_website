@@ -17,7 +17,7 @@ description: Tools for Evidence Synthesis in R
 
 revtools is a software package for exploratory analysis of bibliographic data, designed to make it easier to manage and sort information during evidence synthesis projects. You can use it to visualise patterns in bibliographic data,  interactively select or exclude individual articles or words, and save the results for later analysis in R or excel.
 
-You can get it from [CRAN](https://cran.r-project.org/package=revtools), download the development version from [GitHub](https://github.com/mjwestgate/revtools), or read about it in [this pre-print on bioarxiv](https://doi.org/10.1101/262881).
+You can get it from <a href="https://cran.r-project.org/package=revtools" target="_blank" rel="noopener">CRAN</a>, download the development version from <a href="https://github.com/mjwestgate/revtools" target="_blank" rel="noopener">GitHub</a>, or read about it in <a href="https://doi.org/10.1101/262881" target="_blank" rel="noopener">this pre-print on bioarxiv</a>.
 
 revtools was created by [Martin Westgate](https://martinwestgate.com).
 
