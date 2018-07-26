@@ -20,6 +20,3 @@ revtools is a software package for exploratory analysis of bibliographic data, d
 You can get it from <a href="https://cran.r-project.org/package=revtools" target="_blank" rel="noopener">CRAN</a>, download the development version from <a href="https://github.com/mjwestgate/revtools" target="_blank" rel="noopener">GitHub</a>, or read about it in <a href="https://doi.org/10.1101/262881" target="_blank" rel="noopener">this pre-print on bioarxiv</a>.
 
 revtools was created by [Martin Westgate](https://martinwestgate.com).
-
-<img src="http://www.r-pkg.org/badges/version-last-release/revtools">
-<img src="https://cranlogs.r-pkg.org/badges/grand-total/revtools">
