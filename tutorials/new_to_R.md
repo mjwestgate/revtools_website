@@ -3,7 +3,7 @@ Interested in revtools but haven't used R before? This is for you!
 
 revtools is built to perform some useful tasks with as few functions as possible, so you should be able to use it even if you have no coding experience. I've tried to lay out some logical steps below, but please drop me an email (or write in the comments) if there is anything missing or unclear.
 
-#1. Installing R
+<h2>1. Installing R</h2>
 revtools is a package that runs in the R environment; it can't be used by itself. Consequently, the first thing you'll need to do is download and install R.
 
 Before we do that, a quick note on terminology: R is both a program that you can download, and a language that you use to get that program to run. This can be a little confusing for new users, but just stick with me!
@@ -12,7 +12,7 @@ You can download R from a couple of different places. Perhaps the easiest option
 
 Regardless of which 'type' of R you prefer, it's straightforward to download and install R from either of these sites.
 
-#2. Installing revtools
+<h2>2. Installing revtools</h2>
 Assuming that your installation has worked and you can open R, now you can install revtools. Once you've loaded R, you're faced with the command window. Paste in the following code to install revtools:
 
 <code>install.packages("revtools")
@@ -26,7 +26,7 @@ library(revtools)</code>
 
 At this point you should be ready to go.
 
-#3. Importing your data
+<h2>3. Importing your data</h2>
 revtools is designed to import bibliographic data; specifically the kinds of files that you can export from academic databases such as Web of Science or Scopus. These are typically some type of .ris or .bib format; but different websites tend to have very different styles. Consequently, revtools ignores the suffix and tries to autodetect the sort of file that you have given it.
 
 To import your file, first ensure that it is located in your "working directory". This is the location that R searches for new data, and also where it will save any outputs. In the version of R that I have, the dropdown menu item we're looking for (called 'Change Working Directory') is rather unhelpfully listed under 'Misc', but it might be somewhere else in RStudio.
