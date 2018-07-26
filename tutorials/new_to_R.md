@@ -31,7 +31,7 @@ At this point you should be ready to go.
 
 To import your file, first ensure that it is located in your "working directory". This is the location that R searches for new data, and also where it will save any outputs. In the version of <code>R</code> that I have, the dropdown menu item we're looking for (called 'Change Working Directory') is rather unhelpfully listed under 'Misc', but it might be somewhere else in RStudio.
 
-<b>3. Exploring your data</b>
+<h2>4. Exploring your data</h2>
 Once you have set your working directory, and placed the file you'd like to view in that directory, you're ready to use <code>revtools</code>. Copy and paste the following code into your browser (it may take some time to run, especially for large files), being careful to change 'my_file.ris' to the name of your actual dataset:
 
 <code>my_data<-read_bibliography("my_file.ris")<br>
