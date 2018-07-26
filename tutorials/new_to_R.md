@@ -15,13 +15,13 @@ Regardless of which 'type' of <code>R</code> you prefer, it's straightforward to
 <h2>2. Installing revtools</h2>
 Assuming that your installation has worked and you can open <code>R</code>, now you can install <code>revtools</code>. Once you've loaded R, you're faced with the command window. Paste in the following code:
 
-<code>install.packages("revtools")
+<code>install.packages("revtools")<br>
 library(revtools)</code>
 
 That's it! If everything goes well, this should install <code>revtools</code>, as well as all the other software packages needed to get <code>revtools</code> to work. If it doesn't work for some reason, or you want to use the 'development' version, you can try downloading it from GitHub instead:
 
-<code>install.packages("devtools")
-install_github("mjwestgate/revtools")
+<code>install.packages("devtools")<br>
+install_github("mjwestgate/revtools")<br>
 library(revtools)</code>
 
 At this point you should be ready to go.
@@ -34,7 +34,7 @@ To import your file, first ensure that it is located in your "working directory"
 <b>3. Exploring your data</b>
 Once you have set your working directory, and placed the file you'd like to view in that directory, you're ready to use <code>revtools</code>. Copy and paste the following code into your browser (it may take some time to run, especially for large files), being careful to change 'my_file.ris' to the name of your actual dataset:
 
-<code>my_data<-read_bibliography("my_file.ris")
+<code>my_data<-read_bibliography("my_file.ris")<br>
 screen_visual(my_data)</code>
 
 The first line of this is fairly straightforward; it imports your dataset and converts it into a standard format. However, the second function (<code>screen_visual</code>) does several things behind the scenes:
@@ -45,6 +45,6 @@ The first line of this is fairly straightforward; it imports your dataset and co
 	<li>uses the DTM as the input to a topic model</li>
 	<li>opens a browser window and plot the resulting cloud of references</li>
 </ol>
-After that, what you do with it is up to you! It is important to remember, however, that revtools will not automatically save your progress, so remember to use the 'save' option in the bottom of the left-hand sidebar. Saving to .csv format is most useful for investigating your data manually, but the other option (.rda) is more useful if you want to revisit the same browser window at a later time. Either way, the file you save should appear in your working directory.
+After that, what you do with it is up to you! It is important to remember, however, that <code>revtools</code> will not automatically save your progress, so remember to use the 'save' option in the bottom of the left-hand sidebar. Saving to .csv format is most useful for investigating your data manually, but the other option (.rda) is more useful if you want to revisit the same browser window at a later time. Either way, the file you save should appear in your working directory.
 
 That's all for now - more information will be available in other tutorials soon!
