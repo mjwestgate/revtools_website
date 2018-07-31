@@ -11,7 +11,7 @@ description: Tools for Evidence Synthesis in R
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-121833450-1');
+    gtag('config', 'UA-121833450-2');
   </script>
 </head>
 <h2>Tools for Evidence Synthesis in R</h2>

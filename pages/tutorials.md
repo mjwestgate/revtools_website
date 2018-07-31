@@ -10,7 +10,7 @@ title: news
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-121833450-1');
+    gtag('config', 'UA-121833450-2');
   </script>
 </head>
 # Tutorials
