@@ -1,6 +1,6 @@
 ---
 layout: default
-title: news
+title: tutorials
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
