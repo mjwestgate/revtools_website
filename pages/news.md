@@ -2,6 +2,17 @@
 layout: default
 title: news
 ---
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121833450-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-121833450-1');
+  </script>
+</head>
 # News
 2018-02-06: <a href = "/posts/2018_03_13_release_v0_2_2.html">revtools v0.2.2 released</a>
 <br><br>

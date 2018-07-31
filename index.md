@@ -14,6 +14,7 @@ description: Tools for Evidence Synthesis in R
     gtag('config', 'UA-121833450-1');
   </script>
 </head>
+<h2>Tools for Evidence Synthesis in R</h2>
 
 revtools is a software package for exploratory analysis of bibliographic data, designed to make it easier to manage and sort information during evidence synthesis projects. You can use it to visualise patterns in bibliographic data,  interactively select or exclude individual articles or words, and save the results for later analysis in R or excel.
 
