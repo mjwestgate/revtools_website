@@ -1,4 +1,4 @@
-<h1>New to R?</h1>
+<h1>Appendix 1: New to R?</h1>
 Interested in <code>revtools</code> but haven't used R before? This is for you!
 
 <code>revtools</code> is built to perform some useful tasks with as few functions as possible, so you should be able to use it even if you have no coding experience. I've tried to lay out some logical steps below, but please drop me an email (or write in the comments) if there is anything missing or unclear.

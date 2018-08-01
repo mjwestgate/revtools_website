@@ -1,6 +1,6 @@
 ---
-layout: default
-title: tutorials
+layout: user_manual
+title: Overview
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,12 +13,6 @@ title: tutorials
     gtag('config', 'UA-121833450-2');
   </script>
 </head>
-# Tutorials
+# Overview
 
-This page is under development in preparation for version 0.2.3 (planned for August 2018), but check back soon!
-
-Topics
-- <a href="/tutorials/new_to_R.html">New to R?</a>
-- Importing data
-- De-duplicating bibliographies
-- Screening with <code>screen_visual()</code>
+revtools is an R package for evidence synthesis applications. 
