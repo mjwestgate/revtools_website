@@ -1,3 +1,7 @@
+---
+layout: user_manual
+title: New to R?
+---
 <h1>Appendix 1: New to R?</h1>
 Interested in <code>revtools</code> but haven't used R before? This is for you!
 
