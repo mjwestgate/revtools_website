@@ -1,6 +1,6 @@
 ---
 layout: user_manual
-title: Overview
+title: Introduction
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,6 +13,6 @@ title: Overview
     gtag('config', 'UA-121833450-2');
   </script>
 </head>
-# Overview
+#Introduction
 
-revtools is an R package for evidence synthesis applications. 
+revtools is an R package for evidence synthesis applications.
