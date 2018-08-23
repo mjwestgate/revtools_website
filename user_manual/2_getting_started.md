@@ -2,11 +2,11 @@
 layout: user_manual
 title: Getting Started
 ---
-#2. Getting Started
+# 2. Getting Started
 
 <code>revtools</code> is built to perform some useful tasks with as few functions as possible, so you should be able to use it even if you have no coding experience. 
 
-##2.1. Downloading and Installing R
+## 2.1. Downloading and Installing R
 <code>revtools</code> is a package that runs in the <code>R</code> environment; it can't be used by itself. Consequently, the first thing you'll need to do is download and install <code>R</code>.
 
 Before we do that, a quick note on terminology: <code>R</code> is both a program that you can download, and a language that you use to get that program to run. This can be a little confusing for new users, but just stick with me!
@@ -15,7 +15,7 @@ You can download <code>R</code> from a couple of different places. Perhaps the e
 
 Regardless of which 'type' of <code>R</code> you prefer, it's straightforward to download and install it from either of these sites.
 
-##2.2. Installing revtools
+## 2.2. Installing revtools
 Assuming that your installation has worked and you can open <code>R</code>, now you can install <code>revtools</code>. Once you've loaded R, you're faced with the command window. Paste in the following code:
 
 <code>install.packages("revtools")<br>
@@ -29,5 +29,5 @@ library(revtools)</code>
 
 At this point you should be ready to go.
 
-##2.3. Getting Data
-<code>revtools</code> is designed to import bibliographic data; specifically the kinds of files that you can export from academic databases such as Web of Science or Scopus. 
+## 2.3. Getting Data
+<code>revtools</code> is designed to import bibliographic data; specifically the kinds of files that you can export from academic databases such as Web of Science or Scopus.

@@ -13,6 +13,7 @@ title: Introduction
     gtag('config', 'UA-121833450-2');
   </script>
 </head>
-#Introduction
+
+# Introduction
 
 revtools is an R package for evidence synthesis applications.
