@@ -2,7 +2,7 @@
 layout: user_manual
 title: Getting Started
 ---
-# 2. Getting Started
+# Getting Started
 
 <code>revtools</code> is built to perform some useful tasks with as few functions as possible, so you should be able to use it even if you have no coding experience. 
 

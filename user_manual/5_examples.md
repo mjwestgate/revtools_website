@@ -2,10 +2,10 @@
 layout: user_manual
 title: Examples
 ---
-# 5. Examples
+# Examples
 
-## 5.1. Efficient search strings
+## Creating efficient search strings
 
-## 5.2. Screening articles with multiple reviewers
+## Screening articles with multiple reviewers
 
-## 5.3. Tracking hot topics 
+## Tracking hot topics
