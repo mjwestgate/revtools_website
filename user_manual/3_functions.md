@@ -15,24 +15,48 @@ title: Command-line Functions
 </head>
 
 # Functions
-The most important functions in <code>revtools</code> call shiny apps that run in your browser. Each of these helps with a different part of the screening process, and will be discussed in the next section. If you'd like to use <code>revtools</code> function in the command line, however, or just want to understand the details underlying these shiny apps, then this section is for you.
+The most important functions in <code>revtools</code> call shiny apps that run in your browser. Each of these helps with a different part of the screening process, and will be discussed in the next section. If you'd like to use <code>revtools</code> functions in the command line, however, or just want to understand the details underlying these shiny apps, then this section is for you.
 
 ## Data import and export
-Bibliographic data can be stored in a range of formats with differing properties (with BibTeX and RIS formats among the most common). In <code>revtools</code>, you can use a single function (<code>read_bibliography</code>) to import your data regardless of what file type that data is stored in. For example, if you had the same data stored in both .bib and .ris formats, then these two commands would give the same result:
+Bibliographic data can be stored in a range of formats with differing properties (with BibTeX and RIS formats among the most common). In <code>revtools</code>, you can use a single function (<code>read_bibliography</code>) to import your data regardless of what file type that data is stored in.  This approach differs from other R packages such as <a href="https://cran.r-project.org/package=RefManageR" target="_blank" rel="noopener">RefManageR</a> or <a href="https://cran.r-project.org/package=bibtex" target="_blank" rel="noopener">bibtex</a> that are really good at importing .bib files, but don't support .ris formats. For example, if you had the same data stored in both .bib and .ris formats, then these two commands would give the same result:
 
 ```
 data <- read_bibliography("my_data.ris")
 data <- read_bibliography("my_data.bib")
 ```
 
- This approach differs from other R packages such as <a href="https://cran.r-project.org/package=RefManageR" target="_blank" rel="noopener">RefManageR</a> or <a href="https://cran.r-project.org/package=bibtex" target="_blank" rel="noopener">bibtex</a> that are really good at importing .bib files, but don't support .ris formats.
+Once your data have been imported, they are stored in a list-based format of class <code>bibliography</code>. Each <code>bibliography</code> entry is another list containing all the information provided on a given reference. Further, the tags are converted to a standardised format; so regardless of the format your data are stored in, you get meaningful headings.
 
-Once your data have been imported, they are stored in a list-based format of class <code>bibliography</code>. Each <code>bibliography</code> entry is another list containing all the information provided on a given reference. You can use the S3 methods <code>print</code> or <code>summary</code> to give an overview of the content of a bibliography object. Calling <code>print</code> will show the formatted reference for the first n entries (default n = 5), meaning that it is basically a wrapper function to <code>revtools::format_citation</code>. In contrast, calling <code>summary</code> gives more detailed information on the number of articles in the <code>bibliography</code> object, the proportion that contain abstracts, and the most common sources (i.e. journal titles) in that datasets.
+ ```
+ > class(data)
+ "bibliography"
+
+ > class(data[[1]])
+ "list"
+
+ > names(data[[1]])
+ [1] "type"   "author"    "year"    "title"   "journal"
+ ```
+
+You can use the S3 methods <code>print</code> or <code>summary</code> to give an overview of the content of a bibliography object. Calling <code>print</code> will show the formatted reference for the first n entries (default n = 5), meaning that it is basically a wrapper function to <code>revtools::format_citation</code>. In contrast, calling <code>summary</code> gives more detailed information on the number of articles in the <code>bibliography</code> object, the proportion that contain abstracts, and the most common sources (i.e. journal titles) in that dataset.
 
 Finally, you can easily convert your <code>bibliography</code> object into a <code>data.frame</code> by calling <code>as.data.frame</code>, or re-export to other bibliographic software using <code>write_bibliography</code>.
 
 ## Searching for duplicates
+[in development]
 functions: fuzzdist & stringdist (external), find_duplicates, extract_unique_references, merge_columns
 
 ## Text mining
-functions: make_DTM, run_LDA
+Although <code>revtools</code> is designed to support evidence synthesis projects, you can also use it to build and explore patterns in topic models. The key new function for this purpose that is provided by <code>revtools</code> is <code>make_DTM</code>, which takes a vector of strings and performs the following transformations on it:
+
+1. converts all text to lower case
+2. removes punctuation, 'stop words' (defaulting to <code>tm::stopwords</code>) and numbers
+3. performs stemming on all words (warning: requires the <code>SnowballC</code> package)
+4. removes all words with <3 letters, <5 appearances, or that are in <1% of documents
+5. replaces stemmed words with the most common 'full' version of that word in the corpus
+
+As these are all quite standard transformations in text mining, calling <code>make_DTM</code> can save you some time over performing these transformations manually.
+
+Once you have calcualted your DTM, you can construct a topic model by passing it directly to the functions in the <code>topicmodels</code>  package (i.e. <code>LDA</code> or <code>CTM</code>), or via the wrapper function <code>revtools::run_LDA</code>. Either way the object returned is the same.
+
+

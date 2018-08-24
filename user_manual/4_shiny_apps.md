@@ -30,5 +30,5 @@ Function: screen_abstracts
 
 ## Sorting data using topic models
 
-Function: screen_topics
+Function: screen_topics<br>
 class: screen_topics_progress
