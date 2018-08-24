@@ -26,6 +26,7 @@ This manual provides an overview of the key functions and apps available in <cod
 
 <font color="black">Westgate, M.J. (2018) revtools: Tools for Evidence Synthesis. R package version 0.3.0, <a href="https://CRAN.R-project.org/package=revtools" target="_blank" rel="noopener">https://CRAN.R-project.org/package=revtools</a></font>
 
+
 Thanks for trying <code>revtools</code>, and I hope you find it useful in your research.
 
 Martin Westgate<br>
