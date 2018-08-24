@@ -24,7 +24,7 @@ In practical terms, <code>revtools</code> provides some simple functions for imp
 
 This manual provides an overview of the key functions and apps available in <code>revtools</code>, and gives some examples of how you might want to use them in practice. If you choose to use <code>revtools</code> in your research, please cite it as:
 
-<font color="black">Westgate, M.J. (2018) revtools: Tools for Evidence Synthesis. R package version 0.3.0, <a href="https://CRAN.R-project.org/package=revtools"target="_blank" rel="noopener">https://CRAN.R-project.org/package=revtools</a></font>
+<font color="black">Westgate, M.J. (2018) revtools: Tools for Evidence Synthesis. R package version 0.3.0, <a href="https://CRAN.R-project.org/package=revtools" target="_blank" rel="noopener">https://CRAN.R-project.org/package=revtools</a></font>
 
 Thanks for trying <code>revtools</code>, and I hope you find it useful in your research.
 
