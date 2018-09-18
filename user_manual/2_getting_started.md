@@ -15,7 +15,6 @@ title: getting started
 </head>
 
 # Getting Started
-
 <code>revtools</code> is built to perform some useful tasks with as few functions as possible, so you should be able to use it even if you have no coding experience. However, there are a few steps that you will need to take to get it to work.
 
 ## Downloading and Installing R

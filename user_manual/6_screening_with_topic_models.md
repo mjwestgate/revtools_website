@@ -20,8 +20,12 @@ The main way to investigate the results of a topic model in revtools is via the 
 
 You can run this with or without data; e.g.
 
-## Data manipulation
-Although <code>revtools</code> is designed to support evidence synthesis projects, you can also use it to build and explore patterns in topic models. The key new function for this purpose that is provided by <code>revtools</code> is <code>make_DTM</code>, which takes a vector of strings and performs the following transformations on it:
+## Selecting data
+[How to choose what data to include in the model & what column to group by]
+
+
+## Background
+<code>make_DTM</code>, which takes a vector of strings and performs the following transformations on it:
 
 1. converts all text to lower case
 2. removes punctuation, 'stop words' (defaulting to <code>tm::stopwords</code>) and numbers
