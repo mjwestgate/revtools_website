@@ -1,6 +1,6 @@
 ---
 layout: user_manual
-title: Examples
+title: examples
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->

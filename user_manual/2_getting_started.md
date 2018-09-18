@@ -1,6 +1,6 @@
 ---
 layout: user_manual
-title: Getting Started
+title: getting started
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
