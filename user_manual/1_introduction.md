@@ -31,3 +31,5 @@ Thanks for trying <code>revtools</code>, and I hope you find it useful in your r
 Martin Westgate<br>
 Maintainer, revtools<br>
 August 2018
+
+<a href="/user_manual/2_getting_started.html">Next: Getting started</a>

@@ -40,5 +40,4 @@ library(revtools)</code>
 
 At this point you should be ready to go.
 
-## Getting Data
-<code>revtools</code> is designed to import bibliographic data; specifically the kinds of files that you can export from academic databases such as Web of Science or Scopus.
+<a href="/user_manual/1_introduction.html">Previous: Introduction</a> | <a href="/user_manual/3_working_with_data.html">Next: Working with data</a>

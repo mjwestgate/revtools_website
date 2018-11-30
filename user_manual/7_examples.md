@@ -80,3 +80,5 @@ p <- ggplot(popularity_results,
 geom_point()
 p
 ```
+
+<a href="/user_manual/6_screening_with_topic_models.html">Previous: Screening with topic models</a>

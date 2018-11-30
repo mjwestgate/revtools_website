@@ -52,3 +52,5 @@ Finally, the barplot that you can find under display > words shows the weight of
 
 ## Screening
 You can select or exclude any article or topic. Excluding by topic is risky. Excluding individual words will increase the rigour of your approach, but probably won't make a great deal of difference to the fit unless there are very common or influential words in the corpus. For example if your abstracts contain information on publishers, and those publishers differ in the nature of the content that they publish, then their names might acquire high weight in the topic model.
+
+<a href="/user_manual/5_manual_screening.html">Previous: Manual screening</a> | <a href="/user_manual/7_examples.html">Next: Examples</a>

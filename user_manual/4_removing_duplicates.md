@@ -33,3 +33,6 @@ Once you have searched for potential duplicates, you can use <code>extract_uniqu
 
 ## Manual duplicate extraction
 Intro to screen_duplicates
+
+
+<a href="/user_manual/3_working_with_data.html">Previous: Working with data</a> | <a href="/user_manual/5_manual_screening.html">Next: Manual screening</a>

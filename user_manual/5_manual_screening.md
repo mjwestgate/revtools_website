@@ -22,3 +22,5 @@ Title screening is achieved using the function <code>screen_titles</code>. You c
 
 ## Abstract screening
 Abstract screening is achieved using the function <code>screen_abstracts</code>. Unlike <code>screen_titles</code>, <code>screen_abstracts</code> only shows data for one article at a time.
+
+<a href="/user_manual/4_removing_duplicates.html">Previous: Removing duplicates</a> | <a href="/user_manual/6_screening_with_topic_models.html">Next: Screening with topic models</a>
