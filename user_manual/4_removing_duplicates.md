@@ -38,7 +38,7 @@ result <- screen_duplicates(data)
 ## Specifying variables
 The 'Data' tab contains four menus:
 
-<img src="/assets/screenshots/screen_duplicates_data_tab.png"/>
+<img src="/assets/screenshots/screen_duplicates_data_tab.png" width="200"/>
 
 <b>Import:</b> If you haven't passed any data to <code>screen_duplicates</code>, then this allows you to drag-and-drop a dataset directly in to the app.
 
@@ -50,7 +50,7 @@ The 'Data' tab contains four menus:
 
 ## String distances
 This section has 5 options
-<img src="/assets/screenshots/screen_duplicates_data_tab.png"/>
+<img src="/assets/screenshots/screen_duplicates_data_tab.png" width="200"/>
 
 <b>Select function</b> has three options:
 - fuzzdist
