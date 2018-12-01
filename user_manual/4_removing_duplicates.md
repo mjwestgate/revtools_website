@@ -15,10 +15,9 @@ title: removing duplicates
 </head>
 
 # Removing duplicates
-Duplicate identification and removal is a large field in itself, but the method applied in <code>revtools</code> is intentionally simple. Basically, you can use the function <code>find_duplicates</code> to look for repeated information within a column of data within a <code>data.frame</code>. The easiest way to get a feel for how these functions work is to investigate them with <code>screen_duplicates</code>; but you can get most of the same results from the command line.
+Duplicate identification and removal is a large field in itself, but the method applied in <code>revtools</code> is intentionally simple. Basically, you can use the function <code>find_duplicates</code> to look for repeated information within a column of data within a <code>data.frame</code>. The easiest way to get a feel for how these functions work is to investigate them with <code>screen_duplicates</code>, which aunches a Shiny app; but you can run the underlying string matching algorithms from the command line if you prefer.
 
-# screen_duplicates
-This function launches a Shiny app for detecting and screening duplicates. You can launch it in one of three different ways. First, if you want to import data within the app, then you just run the function by itself:
+You can launch <code>screen_duplicates</code> in one of three different ways. First, if you want to import data within the app, then you just run the function by itself:
 ```
 screen_duplicates()
 ```
@@ -49,8 +48,9 @@ The 'Data' tab contains four menus:
 <b>Select grouping Variable(s):</b> If no variables are specified, then the matching function (<code>find_duplicates</code>) will search every value against every other value in a <code>while</code> loop. This is computationally expensive for large datasets, so this menu allows you to limit the search for matches. The default is to search for titles, but only within the entries with the same journal and year.
 
 ## String distances
-This section has 5 options
-<img src="/assets/screenshots/screen_duplicates_data_tab.png" width="200"/>
+This section has 5 options:
+
+<img src="/assets/screenshots/screen_duplicates_matching_tab.png" width="200"/>
 
 <b>Select function</b> has three options:
 - fuzzdist
@@ -64,16 +64,23 @@ This section has 5 options
 <b>Make lower case</b> and <b>remove punctuation</b> do just that.
 
 
-# Underlying functions
+## Alternatives
+If you'd rather not screen each duplicate manually, you can run all of the specified functions in the command line.
+```
+data <- read_bibliography("my_data.ris")
 
-## find_duplicates
-In practical terms, <code>find_duplicates</code> uses a <code>while</code> loop to search for potential duplicates.
-
-A <code>while</code> loop, while faster than matching every pair of can be slow
-
-## extract_unique_references
+matches <- find_duplicates(
+  data = titles,
+  match_variable = "x",
+  group_variable = NULL,
+  match_function = "fuzzdist",
+  method = "fuzz_partial_ratio",
+  threshold = 0
+)
+```
 Once you have searched for potential duplicates, you can use <code>extract_unique_references</code> to automatically extract one reference from every 'group' of matched documents. This function simply picks the document with the most text from each group.
-
-
+```
+data_unique <- extract_unique_references(data, matches)
+```
 
 <a href="/user_manual/3_working_with_data.html">Previous: Working with data</a> | <a href="/user_manual/5_manual_screening.html">Next: Manual screening</a>
