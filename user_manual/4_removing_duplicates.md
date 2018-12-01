@@ -53,9 +53,9 @@ This section has 5 options:
 <img src="/assets/screenshots/screen_duplicates_matching_tab.png" width="200"/>
 
 <b>Select function</b> has three options:
-- fuzzdist
-- stringdist
-- exact
+- fuzzdist: fuzzy string matching based on the fuzzywuzzy Python library
+- stringdist: Ditto, but from R::stringdist
+- exact: match strings exactly
 
 <b>Select method</b> allows you to select a matching algorithm for the specified function.
 
@@ -63,6 +63,12 @@ This section has 5 options:
 
 <b>Make lower case</b> and <b>remove punctuation</b> do just that.
 
+## App behaviour
+If the selected algorithm doesn't detect any duplicates with the specified settings, then it will show a warning message to that effect. If it does locate some potential duplicates, then it will then present pairs of potential duplicates to you, and invite you to select which you would like to keep:
+
+<img src="/assets/screenshots/screen_duplicates.png"/>
+
+Once you have checked all possible duplicates, the app will prompt you to save your data as an exported file. Alternatively, you can exit the 'save' screen and click 'exit app' to return your saved results to the workspace.
 
 ## Alternatives
 If you'd rather not screen each duplicate manually, you can run all of the specified functions in the command line.
