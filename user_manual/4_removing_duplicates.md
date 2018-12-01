@@ -20,8 +20,8 @@ Duplicate identification and removal is a large field in itself, but the method 
 data <- read_bibliography("my_data.ris")
 
 matches <- find_duplicates(
-  data = titles,
-  match_variable = "x",
+  data = data,
+  match_variable = "title",
   group_variable = NULL,
   match_function = "fuzzdist",
   method = "fuzz_partial_ratio",
