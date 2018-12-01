@@ -1,6 +1,6 @@
 ---
 layout: user_manual
-title: manual screening
+title: Manual screening
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->

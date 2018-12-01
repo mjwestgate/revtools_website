@@ -1,6 +1,6 @@
 ---
 layout: user_manual
-title: working with data
+title: Importing data
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->

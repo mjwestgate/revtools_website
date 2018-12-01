@@ -1,6 +1,6 @@
 ---
 layout: user_manual
-title: getting started
+title: Getting started
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -40,4 +40,4 @@ library(revtools)</code>
 
 At this point you should be ready to go.
 
-<a href="/user_manual/1_introduction.html">Previous: Introduction</a> | <a href="/user_manual/3_working_with_data.html">Next: Working with data</a>
+<a href="/user_manual/1_introduction.html">Previous: Introduction</a> | <a href="/user_manual/3_importing_data.html">Next: Importing data</a>

@@ -1,6 +1,6 @@
 ---
 layout: user_manual
-title: screening with topic models
+title: Screening with topic models
 ---
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
