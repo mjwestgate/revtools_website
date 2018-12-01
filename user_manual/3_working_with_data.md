@@ -48,7 +48,7 @@ data_list <- lapply(
 )
 ```
 
-## merging two data.frames
+## Merging two data.frames
 If your two (or more) datasets are from the same source then it is possible that they will contain all of the same types of information, and be imported to R with identical numbers of columns, and the same column names. If that is the case, you can combine them using the base R command 'rbind'.
 ```
 data_all <- rbind(data1, data2)
