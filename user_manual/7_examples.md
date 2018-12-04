@@ -59,7 +59,7 @@ popularity$topic <- as.factor(popularity$topic)
 # create a mixed model
 library(lme4)
 popularity_model <- glmer(Freq ~ 1 + (1 | topic) + (year -1 | topic),
-	family = poisson(link="log"),
+	family = poisson(link = "log"),
 	data = popularity
 )
 

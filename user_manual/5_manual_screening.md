@@ -21,18 +21,18 @@ In the systematic review community, the standard method to sort scientific mater
 Title screening is achieved using the function <code>screen_titles</code>. You can run this function without any commands to launch the app in 'empty' mode, allowing you to load data via the 'browse' button; or with an object of class <code>bibliography</code> or <code>data.frame</code>. As with <code>screen duplicates</code>, you get the same app - but slightly different behaviour - depending on how you launch it:
 
 ```
-# standalone; load in data in the app
+# 1. standalone; load in data in the app
 screen_titles()
 
-# but save back to workspace on exit
+# 2. the same, but save back to workspace on exit
 result <- screen_titles() # ditto,
 
 data <- read_bibliography("my_data.ris") # load in data
 
-# launch the app using data from the workspace
+# 3. launch the app using data from the workspace
 screen_titles(data)  
 
-# specify an object to return data to
+# 4. specify an object to return data to
 result <- screen_titles(data)
 ```
 
