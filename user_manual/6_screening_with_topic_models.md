@@ -16,10 +16,10 @@ title: Screening with topic models
 
 # Screening with topic models
 
-The main way to investigate the results of a topic model in revtools is via the command <code>screen_topics</code>. This function behaves similarly to the other apps in this package, but it has substantially more options.
+The main way to investigate the results of a topic model in revtools is via the command <code>screen_topics</code>. This function behaves similarly to the other apps in this package, but it has many more options.
 
 ## Selecting data
-If you load <code>screen_topics</code> without any data, it will initially look quite empty.
+If you load <code>screen_topics</code> without any data, it will initially look quite empty:
 
 <img src="/assets/screenshots/screen_topics_initial.png"/>
 
@@ -31,7 +31,7 @@ One you have done this, you will be faced with some new options:
 
 <img src="/assets/screenshots/screen_topics_data_tab_full.png" width="200"/>
 
-<b>Show one point per</b> allows you to select what will be displayed by <code>screen_topics</code>. By default this is 'label', which is simply a unique index for each entry in the dataset, usually corresponding to a single bibliographic entry (i.e. an article or book). However, you can use this option to plot other interesting information. If, for example, you'd like each point to represent one journal, or one year, then you set that here.
+<b>Show one point per</b> allows you to select what will be displayed by <code>screen_topics</code>. By default this is 'label', which is simply an index giving a unique value for each entry in the dataset, usually corresponding to a single book or article However, you can use this option to plot other interesting information. If, for example, you'd like each point to represent one journal, or one year, then you set that here.
 
 <b>Select included variables</b> shows you a series of checkboxes that correspond to the columns of the underlying <code>data.frame</code>. Selecting a checkbox means that the text in that column will be passed to the the topic model. If you want to run the topic model only on titles, for example, then select 'titles' here; whereas if you'd like to include titles, abstracts and keywords you can select all three.
 
@@ -74,13 +74,13 @@ If you click on an article, then further information on that article will be dis
 
 <img src="/assets/screenshots/screen_topics_article.png"/>
 
-If you would prefer to see information on topics, you can hover over the barplot on the right-hand side of the window. Here you can also select topics by clicking, and to select or exclude whole topics.
+If you would prefer to see information on topics, you can hover over the barplot on the right-hand side of the window. Here you can also select topics by clicking, and to select or exclude whole topics (note in this plot the sidebar has been minimized):
 
 <img src="/assets/screenshots/screen_topics_barplot.png"/>
 
 Finally, it is possible to investigate highly-weighted words in each topic by selecting 'Show Words' from the 'Display' tab:
 
-<img src="/assets/screenshots/screen_topics_display_tab.png"/>
+<img src="/assets/screenshots/screen_topics_display_tab.png" width="200"/>
 
 This will show you the topics barplot, and invite you to select a topic to investigate further.
 
