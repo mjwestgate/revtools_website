@@ -14,7 +14,9 @@ title: news
   </script>
 </head>
 # News
-2018-02-06: <a href = "/posts/2018_03_13_release_v0_2_2.html">revtools v0.2.2 released</a>
+2018-12-04: <a href = "/posts/2018_12_04_release_v0_3_0.html">revtools v0.3.0 released</a>
+<br><br>
+2018-03-13: <a href = "/posts/2018_03_13_release_v0_2_2.html">revtools v0.2.2 released</a>
 <br><br>
 2018-02-06: <a href = "/posts/2018_02_06_release_v0_2_1.html">revtools v0.2.1 is on CRAN!</a>
 <br><br>
