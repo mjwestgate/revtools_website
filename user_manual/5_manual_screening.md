@@ -18,26 +18,31 @@ title: Manual screening
 In the systematic review community, the standard method to sort scientific material (such as articles and reports) is via manual screening. In general, this screening process is split into several stages: first titles are screened and the relevant articles kept; then the abstracts are screened for retained articles to see which of those may still be useful; and finally full-text articles are screened. <code>revtools</code> currently supports title and abstract screening only.
 
 ## Title screening
-Title screening is achieved using the function <code>screen_titles</code>. You can run this function without any commands to launch the app in 'empty' mode, allowing you to load data via the 'browse' button; or with an object of class <code>bibliography</code> or <code>data.frame</code>.
-
-As with <code>screen duplicates</code>, you get the same app - but slightly different behaviour - depending on how you launch the app:
+Title screening is achieved using the function <code>screen_titles</code>. You can run this function without any commands to launch the app in 'empty' mode, allowing you to load data via the 'browse' button; or with an object of class <code>bibliography</code> or <code>data.frame</code>. As with <code>screen duplicates</code>, you get the same app - but slightly different behaviour - depending on how you launch it:
 
 ```
-screen_titles()  # standalone; load in data in the app
-result <- screen_titles() # ditto, but save back to workspace on exit
+# standalone; load in data in the app
+screen_titles()
+
+# but save back to workspace on exit
+result <- screen_titles() # ditto,
 
 data <- read_bibliography("my_data.ris") # load in data
-screen_titles(data)  # launch the app using data from the workspace
-result <- screen_titles(data) # specify an object to return data to
+
+# launch the app using data from the workspace
+screen_titles(data)  
+
+# specify an object to return data to
+result <- screen_titles(data)
 ```
 
-Once you've loaded the app using <code>screen_titles</code>, you will see the 'data' tab open in the dashboard:
+Once you've loaded the app using <code>screen_titles</code>, you will see the 'Data' tab open in the dashboard:
 
 <img src="/assets/screenshots/screen_titles_data_tab.png" width="200"/>
 
 These four options work as follows:
 
-<b>Import:</b> If you haven't passed any data to <code>screen_titles</code>, then this allows you to drag-and-drop a dataset directly in to the app. If you _have_ loaded <code>screen_titles</code> with data, or you have already added some data, then dragging and dropping here will add the new dataset to the existing one (using <code>merge_columns</code> in the background).
+<b>Import</b> allows you to drag-and-drop a dataset directly in to the app. If you've loaded <code>screen_titles</code> with data, or you have already added some data, then dragging and dropping here will add the new dataset to the existing one (using <code>merge_columns</code> in the background).
 
 <b>Save Data</b> Allows you to save your progress to a <code>.rds</code> or <code>.csv</code> file.
 
@@ -64,7 +69,7 @@ Once you have loaded the app and added some data, you will be able to manually s
 
 
 ## Abstract screening
-Abstract screening is achieved using the function <code>screen_abstracts</code>. Unlike <code>screen_titles</code>, <code>screen_abstracts</code> only shows data for one article at a time; but the two apps are otherwise identical.
+Abstract screening is achieved using the function <code>screen_abstracts</code>. Unlike <code>screen_titles</code>, <code>screen_abstracts</code> only shows data for one article at a time; but the two apps are otherwise identical, with the exception that <code>screen_abstracts</code> allows you to make notes for each article should you wish.
 
 <img src="/assets/screenshots/screen_abstracts.png"/>
 
