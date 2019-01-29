@@ -17,14 +17,18 @@ Regardless of which 'type' of <code>R</code> you prefer, it's straightforward to
 ## Installing revtools
 Assuming that your installation has worked and you can open <code>R</code>, now you can install <code>revtools</code>. Once you've loaded R, you're faced with the command window. Paste in the following code:
 
-<code>install.packages("revtools")<br>
-library(revtools)</code>
+```
+install.packages("revtools")
+library(revtools)
+```
 
 That's it! If everything goes well, this should install <code>revtools</code>, as well as all the other software packages needed to get <code>revtools</code> to work. If it doesn't work for some reason, or you want to use the 'development' version, you can try downloading it from GitHub instead:
 
-<code>install.packages("devtools")<br>
-install_github("mjwestgate/revtools")<br>
-library(revtools)</code>
+```
+install.packages("devtools")
+install_github("mjwestgate/revtools")
+library(revtools)
+```
 
 At this point you should be ready to go.
 
