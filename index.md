@@ -3,7 +3,7 @@ layout: home
 title: revtools
 description: Tools for Evidence Synthesis in R
 ---
-<h2>Tools for Evidence Synthesis in R</h2>
+<img align="left" height="120" src="/assets/img/revtools_hex.png"><h2>Tools for Evidence Synthesis in R</h2>
 
 <code>revtools</code> is an R package to support researchers working on evidence synthesis projects. It provides a free, easy-to-use, open-source environment to conduct your literature review or meta-analysis. You can use it to visualise patterns in bibliographic data, interactively select or exclude individual articles or words, and save the results for later analysis.
 
