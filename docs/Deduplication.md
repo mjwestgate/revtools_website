@@ -3,7 +3,7 @@ layout: default
 title: Deduplication
 ---
 # Removing duplicates
-Duplicate identification and removal is a large field in itself, but the method applied in <code>revtools</code> is intentionally simple. Basically, you can use the function <code>find_duplicates</code> to look for repeated information within a column of data within a <code>data.frame</code>:
+Duplicate identification and removal is a large field in itself, but the method applied in revtools is intentionally simple. Basically, you can use the function <code>find_duplicates</code> to look for repeated information within a column of data within a <code>data.frame</code>:
 ```
 data <- read_bibliography("my_data.ris")
 

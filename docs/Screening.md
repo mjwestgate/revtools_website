@@ -3,7 +3,7 @@ layout: default
 title: Screening
 ---
 # Manual screening
-In the systematic review community, the standard method to sort scientific material (such as articles and reports) is via manual screening. In general, this screening process is split into several stages: first titles are screened and the relevant articles kept; then the abstracts are screened for retained articles to see which of those may still be useful; and finally full-text articles are screened. <code>revtools</code> currently supports title and abstract screening only.
+In the systematic review community, the standard method to sort scientific material (such as articles and reports) is via manual screening. In general, this screening process is split into several stages: first titles are screened and the relevant articles kept; then the abstracts are screened for retained articles to see which of those may still be useful; and finally full-text articles are screened. revtools currently supports title and abstract screening only.
 
 ## Title screening
 Title screening is achieved using the function <code>screen_titles</code>. You can run this function without any commands to launch the app in 'empty' mode, allowing you to load data via the 'browse' button; or with an object of class <code>bibliography</code> or <code>data.frame</code>. As with <code>screen duplicates</code>, you get the same app - but slightly different behaviour - depending on how you launch it:
