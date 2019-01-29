@@ -101,5 +101,3 @@ z <- c(x, y)
 This can be useful if you are collating data from multiple sources. You can also re-export from class 'bibliography' to other bibliographic software using <code>write_bibliography</code>.
 
 You can use the S3 methods <code>print</code> or <code>summary</code> to give an overview of the content of a bibliography object. Calling <code>print</code> will show the formatted reference for the first n entries (default n = 5), meaning that it is basically a wrapper function to <code>revtools::format_citation</code>. In contrast, calling <code>summary</code> gives more detailed information on the number of articles in the <code>bibliography</code> object, the proportion that contain abstracts, and the most common sources (i.e. journal titles) in that dataset. Finally, you can easily convert your <code>bibliography</code> object into a <code>data.frame</code> by calling <code>as.data.frame</code>.
-
-<a href="/user_manual/2_getting_started.html">Previous: Getting started</a> | <a href="/user_manual/4_removing_duplicates.html">Next: Removing duplicates</a>

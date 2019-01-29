@@ -76,5 +76,3 @@ If the selected algorithm doesn't detect any duplicates with the specified setti
 <img src="/assets/screenshots/screen_duplicates.png"/>
 
 Once you have checked all possible duplicates, the app will prompt you to save your data as an exported file. Alternatively, you can exit the 'save' screen and click 'exit app' to return your saved results to the workspace.
-
-<a href="/user_manual/3_importing_data.html">Previous: Importing data</a> | <a href="/user_manual/5_manual_screening.html">Next: Manual screening</a>
