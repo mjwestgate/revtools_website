@@ -1,19 +1,7 @@
 ---
-layout: user_manual
-title: Removing duplicates
+layout: default
+title: Deduplication
 ---
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121833450-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-121833450-2');
-  </script>
-</head>
-
 # Removing duplicates
 Duplicate identification and removal is a large field in itself, but the method applied in <code>revtools</code> is intentionally simple. Basically, you can use the function <code>find_duplicates</code> to look for repeated information within a column of data within a <code>data.frame</code>:
 ```
