@@ -8,6 +8,6 @@ google_analytics: true
 exclude: ["README.md"]
 google_analytics: UA-121833450-2
 header_pages:
-- docs/Import
-- docs/Deduplication
-- docs/Screening
+- docs/Import.md
+- docs/Deduplication.md
+- docs/Screening.md
