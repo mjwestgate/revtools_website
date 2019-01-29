@@ -61,7 +61,7 @@ Abstract screening is achieved using the function <code>screen_abstracts</code>.
 
 <img src="/assets/screenshots/screen_abstracts.png"/>
 
-<a href="/user_manual/4_removing_duplicates.html">Previous: Removing duplicates</a> | <a href="/user_manual/6_screening_with_topic_models.html">Next: Screening with topic models</a>
+
 
 # Screening with topic models
 
@@ -135,6 +135,6 @@ This will show you the topics barplot, and invite you to select a topic to inves
 
 <img src="/assets/screenshots/screen_topics_words_initial.png"/>
 
-If you select a topic in the bar plot on the right of the screen, you will now be shown a barplot of highly-weighted words in that topic. You can then select and exclude words that you don't want to contribute to your enxt topic model. Alternatively, you can search for words and exclude them manually.
+If you select a topic in the bar plot on the right of the screen, you will now be shown a barplot of highly-weighted words in that topic. You can then select and exclude words that you don't want to contribute to your next topic model. Alternatively, you can search for words and exclude them manually.
 
 <img src="/assets/screenshots/screen_topics_words_selected.png"/>
