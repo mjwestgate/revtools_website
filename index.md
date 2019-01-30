@@ -19,4 +19,4 @@ In practical terms, revtools provides some simple functions for importing and ma
 <img align="left" height="120" src="/assets/img/revtools_hex.png"> If you use revtools in your research, please cite it as:
 
 <font color="black">Westgate, M.J. (2018) revtools: Tools for Evidence Synthesis. R package version 0.3.0, <a href="https://CRAN.R-project.org/package=revtools" target="_blank" rel="noopener">https://CRAN.R-project.org/package=revtools</a></font>
-<br>
+<br><br><br>
