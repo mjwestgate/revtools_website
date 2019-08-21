@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 0px solid $grey-color-dark;
-  border-bottom: 0px solid $grey-color-light;
+  border-top: 0px;
+  border-bottom: 0px;
   background-color: #27114D;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -78,10 +78,14 @@
   }
 
   .page-link {
-    color: white;
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
+    color: white;
+
+    @include media-query($on-palm) {
+      color: $grey-color-dark;
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
