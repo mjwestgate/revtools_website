@@ -2,37 +2,7 @@
 layout: default
 title: Import
 ---
-# Getting Started
-revtools is built to perform some useful tasks with as few functions as possible, so you should be able to use it even if you have no coding experience. However, there are a few steps that you will need to take to get it to work.
-
-## Downloading and Installing R
-revtools is a package that runs in the R environment; it can't be used by itself. Consequently, the first thing you'll need to do is download and install R.
-
-Before we do that, a quick note on terminology: R is both a program that you can download, and a language that you use to get that program to run. This can be a little confusing for new users, but just stick with me!
-
-You can download R from a couple of different places. Perhaps the easiest option is to use <a href="https://www.rstudio.com" target="_blank" rel="noopener">RStudio</a>, which gives a very stable, familiar-looking statistical interface to the R language. If you'd prefer something simpler, you can get the 'default' version from the <a href="https://cran.r-project.org" target="_blank" rel="noopener">Comprehensive R Archive Network</a>. CRAN are the people who actually build and maintain R, but their user interface is fairly basic, which can be off-putting for some users.
-
-Regardless of which 'type' of R you prefer, it's straightforward to download and install it from either of these sites.
-
-## Installing revtools
-Assuming that your installation has worked and you can open R, now you can install revtools. Once you've loaded R, you're faced with the command window. Paste in the following code:
-
-```
-install.packages("revtools")
-library(revtools)
-```
-
-That's it! If everything goes well, this should install revtools, as well as all the other software packages needed to get revtools to work. If it doesn't work for some reason, or you want to use the 'development' version, you can try downloading it from GitHub instead:
-
-```
-install.packages("devtools")
-install_github("mjwestgate/revtools")
-library(revtools)
-```
-
-At this point you should be ready to go.
-
-## Getting data
+# Importing data
 revtools is designed to import bibliographic data; specifically the kinds of files that you can export from academic databases such as Web of Science or Scopus. Alternatively, most bibliographic management software (such as Zotero, Mendeley or EndNote) can export to a range of formats, including <code>.ris</code>.
 
 ## read_bibliography
@@ -41,11 +11,16 @@ Bibliographic data can be stored in a range of formats with differing properties
 ```
 data1 <- read_bibliography("my_data.ris")
 data2 <- read_bibliography("my_data.bib")
-
 class(data1) # = data.frame
 ```
 
-If you are working with multiple files, you can import them all by detecting the file names and passing them all to <code>read_bibliography</code>:
+If you are working with multiple files, you can import them all by passing their names to <code>read_bibliography</code> as a vector or list:
+
+```
+data_all <- read_bibliography(c("my_data.ris", "my_data.bib"))
+```
+
+A common extension to this approach is to detect all of the file names in a given subdirectory, and import them all simultaneously:
 
 ```
 # If the files are in the working directory:
@@ -55,25 +30,24 @@ file_names <- list.files()
 path <- "./raw_data/"
 file_names <- paste0(path, list.files(path = path))
 
-# Then import to a list
-data_list <- lapply(
-  file_names,
-  function(x){read_bibliography(x)}
-)
+# Then import to a data.frame
+data_all <- read_bibliography(file_names)
 ```
 
-## Merging two data.frames
-If your two (or more) datasets are from the same source then it is possible that they will contain all of the same types of information, and be imported to R with identical numbers of columns, and the same column names. If that is the case, you can combine them using the base R command <code>rbind</code>.
+If you have imported your files separately but still want to combine them into a single object, the default method in R is to use <code>rbind</code>:
+
 ```
+data1 <- read_bibliography("my_data.ris")
+data2 <- read_bibliography("my_data.bib")
 data_all <- rbind(data1, data2)
 ```
 
-In many cases, however, your files will contain different kinds of data, an using different headings. To merge these using revtools, you can use the function <code>merge_columns</code>:
+This approach is unlikely to work with bibliographic data because they often have different numbers of columns, or columns with different names. Instead, you can combine your data using the function <code>merge_columns</code>:
 ```
 data_all <- merge_columns(data1, data2)
 ```
 
-# Internal data structures
+## Internal data structures
 By default, <code>read_bibliography</code> returns a <code>data.frame</code>. However, it does this via an intermediate step of generating a list-based format called class <code>bibliography</code>. Most users probably won't use this format very often (if at all), but as it makes up a lot of the architecture of revtools, it might be worth checking. If you find an error in your <code>data.frame</code>s, then knowing about this class might be useful for locating the error.
 
 Each <code>bibliography</code> entry is a list containing all the information provided on a given reference. Further, the tags are converted to a standardised format; so regardless of the format your data are stored in, you get meaningful headings.

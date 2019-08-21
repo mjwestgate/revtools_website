@@ -13,6 +13,9 @@ header_pages:
 - docs/screening.md
 minima:
   date_format: "%Y-%m-%d"
-social_links:
-  twitter: westgatecology
-  github:  mjwestgate
+  social_links:
+    twitter: westgatecology
+    github:  mjwestgate
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
