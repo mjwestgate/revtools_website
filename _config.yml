@@ -14,7 +14,7 @@ plugins:
  - jekyll-feed
  - jekyll-seo-tag
 header_pages:
-- docs/introduction.md
-- docs/import.md
-- docs/deduplication.md
-- docs/screening.md
+- introduction.md
+- import.md
+- deduplication.md
+- screening.md
