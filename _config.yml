@@ -1,14 +1,18 @@
 title: revtools
-author: Martin Westgate
-description: Tools for Evidence Synthesis in R
-theme: minima
-github_username: mjwestgate
-twitter_username: westgatecology
 email: martinjwestgate@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  An R package for screening in evidence synthesis projects
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: true
-exclude: ["README.md"]
 google_analytics: UA-121833450-2
 header_pages:
-- docs/Import.md
-- docs/Deduplication.md
-- docs/Screening.md
+- docs/introduction.md
+- docs/import.md
+- docs/deduplication.md
+- docs/screening.md
+minima:
+  date_format: "%Y-%m-%d"
+social_links:
+  twitter: westgatecology
+  github:  mjwestgate

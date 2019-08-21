@@ -3,20 +3,20 @@ layout: home
 title: revtools
 description: Tools for Evidence Synthesis in R
 ---
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
 # Tools for Evidence Synthesis in R
 
-revtools is an R package to support researchers working on evidence synthesis projects. It provides a free, easy-to-use, open-source environment to conduct your literature review or meta-analysis. You can use it to visualise patterns in bibliographic data, interactively select or exclude individual articles or words, and save the results for later analysis.
+<img class="hex" src="/assets/img/revtools_hex.png">  revtools is an R package to support researchers working on evidence synthesis projects. It provides a free, easy-to-use, open-source environment to conduct your literature review or meta-analysis. You can use it to visualise patterns in bibliographic data, interactively select or exclude individual articles or words, and save the results for later analysis.
 
-You can get it from <a href="https://cran.r-project.org/package=revtools" target="_blank" rel="noopener">CRAN</a>, download the development version from <a href="https://github.com/mjwestgate/revtools" target="_blank" rel="noopener">GitHub</a>, or read about it in <a href="https://doi.org/10.1101/262881" target="_blank" rel="noopener">this pre-print on bioarxiv</a>.
+<img src="http://www.r-pkg.org/badges/version-last-release/revtools">
+<img src="http://cranlogs.r-pkg.org/badges/grand-total/revtools">
 
+<br>
 
-## What is evidence synthesis?
-Evidence synthesis is the process of searching, collating and interpreting scientific information. Of course, this definition covers a whole range of possible  activities, from simple literature searches on a single topic or question, right through to a full systematic review or meta-analysis. Whatever their goal, however, many researchers are finding it increasingly difficult to keep track of the amount of literature that they must read to gain an overview of a given research field. This is where revtools can help.
+You can download revtools from <a href="https://cran.r-project.org/package=revtools" target="_blank" rel="noopener">CRAN</a>, view the development version on <a href="https://github.com/mjwestgate/revtools" target="_blank" rel="noopener">GitHub</a>, or read about it in this paper:
 
-In practical terms, revtools provides some simple functions for importing and managing 'bibliographic' data; i.e. lists of books or articles, when they were published, and who they were authored and published by. Rather than just import these data, however, revtools also includes a number of user interfaces (built with Shiny) to help you interactively sort and categorize that content. These functions support a range of tasks from manually sorting article titles or abstracts, right through to automated cluster identification using topic models. By default, each interface hides identifying information of each article, meaning that revtools is consistent with the screening guidelines for systematic reviews given by <a href="https://www.cochrane.org" target="_blank" rel="noopener">Cochrane</a>, the <a href="https://campbellcollaboration.org" target="_blank" rel="noopener">Campbell Collaboration</a>, or the <a href="http://www.environmentalevidence.org" target="_blank" rel="noopener">Collaboration for Environmental Evidence</a>.
+<font color="#6e6e6e">MJ Westgate (2019) revtools: An R package to support article screening for evidence synthesis. <i>Research Synthesis Methods</i> <a href="http://doi.org/10.1002/jrsm.1374" target="_blank" rel="noopener">http://doi.org/10.1002/jrsm.1374</a></font><div data-badge-popover="right" data-badge-type="2" data-doi="10.1002/jrsm.1374" data-hide-no-mentions="true" class="altmetric-embed"></div>
 
-
-<img align="left" height="120" src="/assets/img/revtools_hex.png"> If you use revtools in your research, please cite it as:
-
-<font color="black">Westgate, M.J. (2018) revtools: Tools for Evidence Synthesis. R package version 0.3.0, <a href="https://CRAN.R-project.org/package=revtools" target="_blank" rel="noopener">https://CRAN.R-project.org/package=revtools</a></font>
-<br><br><br>
+<br>
+<br>
