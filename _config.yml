@@ -1,16 +1,10 @@
 title: revtools
+author: Martin Westgate
 email: martinjwestgate@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  An R package for screening in evidence synthesis projects
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-google_analytics: true
+description: An R package for screening in evidence synthesis projects
+theme: minima
+show_excerpts: false
 google_analytics: UA-121833450-2
-header_pages:
-- docs/introduction.md
-- docs/import.md
-- docs/deduplication.md
-- docs/screening.md
 minima:
   date_format: "%Y-%m-%d"
   social_links:
@@ -19,3 +13,8 @@ minima:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+header_pages:
+- docs/introduction.md
+- docs/import.md
+- docs/deduplication.md
+- docs/screening.md
