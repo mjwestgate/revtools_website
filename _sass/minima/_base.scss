@@ -68,6 +68,13 @@ img.hex {
   padding: 5px 15px 5px 0px;
 }
 
+img.screenshot_tall {
+  float: left;
+  width: 200px;
+  vertical-align: left;
+  padding: 5px 15px 5px 0px;
+}
+
 /**
  * Figures
  */
@@ -118,7 +125,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    color: darken($brand-color, 5%);
     text-decoration: underline;
   }
 
@@ -204,6 +211,12 @@ pre {
  * Clearfix
  */
 %clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix:after {
   content: "";
   display: table;
   clear: both;

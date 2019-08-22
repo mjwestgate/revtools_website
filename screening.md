@@ -26,30 +26,46 @@ result <- screen_titles(data)
 
 Once you've loaded the app using <code>screen_titles</code>, you will see the 'Data' tab open in the dashboard:
 
-<img src="/assets/screenshots/screen_titles_data_tab.png" width="200"/>
-
-These four options work as follows:
-
-<b>Import</b> allows you to drag-and-drop a dataset directly in to the app. If you've loaded <code>screen_titles</code> with data, or you have already added some data, then dragging and dropping here will add the new dataset to the existing one (using <code>merge_columns</code> in the background).
-
-<b>Save Data</b> Allows you to save your progress to a <code>.rds</code> or <code>.csv</code> file.
-
-<b>Clear Data</b> Wipes all data from the app (with a warning first to prevent mistakes).
-
-<b>Exit App</b> closes the app, but also invisibly returns a <code>data.frame</code> to the workspace.
-
+<div class="clearfix">
+  <img
+    class="screenshot_tall"
+    src="/assets/screenshots/screen_titles_data_tab.png"
+  />
+  These four options work as follows:
+  <br>
+  <br>
+  <b>Import</b> allows you to drag-and-drop a dataset directly in to the app. If you've loaded <code>screen_titles</code> with data, or you have already added some data, then dragging and dropping here will add the new dataset to the existing one (using <code>merge_columns</code> in the background).
+  <br>
+  <br>
+  <b>Save Data</b> Allows you to save your progress to a <code>.rds</code> or <code>.csv</code> file.
+  <br>
+  <br>
+  <b>Clear Data</b> Wipes all data from the app (with a warning first to prevent mistakes).
+  <br>
+  <br>
+  <b>Exit App</b> closes the app, but also invisibly returns a <code>data.frame</code> to the workspace.
+</div>
+<br>
 
 The 'Appearance' tab doesn't affect the data itself, but how it is displayed.
 
-<img src="/assets/screenshots/screen_titles_appearance_tab.png" width="200"/>
-
-This tab has the following options:
-
-<b>Number of articles shown</b> allows you to increase or decrease the amount of information on your screen.
-
-<b>Order citations by</b> enables you to shuffle between the order of the original dataset; alphabetical order by title; and random (set with <code>rnorm</code>).
-
-<b>Hide identifying information</b> is set to TRUE by default, and means only the titles are shown. If set to FALSE, author and journal names are also shown.
+<div class="clearfix">
+  <img
+    class="screenshot_tall"
+    src="/assets/screenshots/screen_titles_appearance_tab.png"
+  />
+  This tab has the following options:
+  <br>
+  <br>
+  <b>Number of articles shown</b> allows you to increase or decrease the amount of information on your screen.
+  <br>
+  <br>
+  <b>Order citations by</b> enables you to shuffle between the order of the original dataset; alphabetical order by title; and random (set with <code>rnorm</code>).
+  <br>
+  <br>
+  <b>Hide identifying information</b> is set to TRUE by default, and means only the titles are shown. If set to FALSE, author and journal names are also shown.
+</div>
+<br>
 
 Once you have loaded the app and added some data, you will be able to manually select or deselect articles one at a time, or in groups using the 'select all' and 'exclude all' buttons. You can also navigate between pages using the arrow buttons, or choose 'unknown' for ambiguous articles. As you make decisions about which titles to include, the color of the text will update to match your selection.
 
@@ -72,33 +88,38 @@ If you load <code>screen_topics</code> without any data, it will initially look 
 
 <img src="/assets/screenshots/screen_topics_initial.png"/>
 
-From here there are a series of stages before you can see the results of your topic model. The first thing you should do is import data via the 'Import' button:
+From here there are a series of stages before you can see the results of your topic model. The first thing you should do is import data via the 'Import' button. Once you have done this, you will be faced with some new options:
 
-<img src="/assets/screenshots/screen_topics_data_tab_empty.png" width="200"/>
-
-One you have done this, you will be faced with some new options:
-
-<img src="/assets/screenshots/screen_topics_data_tab_full.png" width="200"/>
-
-<b>Show one point per</b> allows you to select what will be displayed by <code>screen_topics</code>. By default this is 'label', which is simply an index giving a unique value for each entry in the dataset, usually corresponding to a single book or article However, you can use this option to plot other interesting information. If, for example, you'd like each point to represent one journal, or one year, then you set that here.
-
-<b>Select included variables</b> shows you a series of checkboxes that correspond to the columns of the underlying <code>data.frame</code>. Selecting a checkbox means that the text in that column will be passed to the the topic model. If you want to run the topic model only on titles, for example, then select 'titles' here; whereas if you'd like to include titles, abstracts and keywords you can select all three.
-
+<div class="clearfix">
+  <img
+    class="screenshot_tall"
+    src="/assets/screenshots/screen_topics_data_tab_full.png"
+  />
+  <b>Show one point per</b> allows you to select what will be displayed by <code>screen_topics</code>. By default this is 'label', which is simply an index giving a unique value for each entry in the dataset, usually corresponding to a single book or article However, you can use this option to plot other interesting information. If, for example, you'd like each point to represent one journal, or one year, then you set that here.
+  <br>
+  <br>
+  <b>Select included variables</b> shows you a series of checkboxes that correspond to the columns of the underlying <code>data.frame</code>. Selecting a checkbox means that the text in that column will be passed to the the topic model. If you want to run the topic model only on titles, for example, then select 'titles' here; whereas if you'd like to include titles, abstracts and keywords you can select all three.
+  </div>
+  <br>
 Once you have selected your data you are ready to go; but you still don't have a plot to work with. To do that you have to use the 'Model' tab.
 
 ## Topic model options
-The 'Model' tab has only a few options, but they strongly affect the outcome of the plot displayed by <code>screen_topics</code>, as well as how long the code will take to run.
+The 'Model' tab has only a few options, but they strongly affect the outcome of the plot displayed by <code>screen_topics</code>, as well as how long the code will take to run. There are three choices:
 
-<img src="/assets/screenshots/screen_topics_model_tab.png" width="200"/>
-
-There are three choices:
-
-<b>Model Type</b> currently only supports Latent Dirichlet Allocation (LDA; the default) or Correlated Topic Models (CTMs). From what I've read, CTMs generally fit better, but generate topics that can be harder to distinguish.
-
-<b>Number of topics</b> is a key parameter. There is no 'correct' answer to what the optimal number of topics should be: smaller numbers will give a broad overview but may group unlike concepts; while larger numbers will be more precise but potentially too atomized. Selecting larger number of topics also increases the time taken for the model to calculate.
-
-<b>Number of iterations</b> is ignored for CTMs, but for LDA affects how hard the algorithm looks for an optimal fit. Smaller values will calculate quicker, but will be less reliable. The default (10k iterations) has been chosen as a pragmatic tradeoff between these considerations, and should not be considered ideal.
-
+<div class="clearfix">
+  <img
+    class="screenshot_tall"
+    src="/assets/screenshots/screen_topics_model_tab.png"
+  />
+  <b>Model Type</b> currently only supports Latent Dirichlet Allocation (LDA; the default) or Correlated Topic Models (CTMs). From what I've read, CTMs generally fit better, but generate topics that can be harder to distinguish.
+  <br>
+  <br>
+  <b>Number of topics</b> is a key parameter. There is no 'correct' answer to what the optimal number of topics should be: smaller numbers will give a broad overview but may group unlike concepts; while larger numbers will be more precise but potentially too atomized. Selecting larger number of topics also increases the time taken for the model to calculate.
+  <br>
+  <br>
+  <b>Number of iterations</b> is ignored for CTMs, but for LDA affects how hard the algorithm looks for an optimal fit. Smaller values will calculate quicker, but will be less reliable. The default (10k iterations) has been chosen as a pragmatic tradeoff between these considerations, and should not be considered ideal.
+</div>
+<br>
 
 ## Running the topic model
 One you hit 'Calculate Model', <code>screen_topics</code> first constructs a Document Term Matrix (DTM) from the specified data, and then runs the function <code>make_dtm</code>. This function performs the following transformations:
