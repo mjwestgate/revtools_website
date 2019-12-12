@@ -1,125 +1,141 @@
 /**
- * Site header
+ * New header
+ * from https://gist.githubusercontent.com/liquidwebgists/5428995/raw/01aa7b10a7d6cea3fd8b856ac282a3829c656bb3/gistfile1
  */
-.site-header {
-  border-top: 0px;
-  border-bottom: 0px;
-  background-color: #27114D;
-  min-height: $spacing-unit * 1.865;
-  line-height: $base-line-height * $base-font-size * 2.25;
+ p.menu {
+  padding-right: 100px;
+ }
 
-  // Positioning context for the mobile navigation icon
-  position: relative;
-}
-
-.site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
-
-  @include media-query($on-palm) {
-    padding-right: 45px;
-  }
-
-  &,
+ a.menu {
+  color: white;
   &:visited {
-    color: white;
+    color: #dbdbdb;
   }
-}
+ }
 
-.site-nav {
-  position: absolute;
-  top: 9px;
-  right: $spacing-unit / 2;
-  background-color: $background-color;
-  border: 1px solid $grey-color-light;
-  border-radius: 5px;
-  text-align: right;
+ nav {
+   background: #27114D;
+   height: 2.3em;
+ }
 
-  .nav-trigger {
-      display: none;
-  }
+ ul, li {
+   margin: 0px;
+   padding: 0px;
+   list-style: none;
+   float: right;
+ }
+ ul {
+   background: #27114D;
+   height: 2em;
+   width: 100%;
+ }
+ li {
+   position: relative;
+ }
+ li a {
+   display: block;
+   line-height: 2em;
+   padding: 0 1em;
+   color: white;
+   text-decoration: none;
+ }
+ li a:hover, .topmenu li:hover > a {
+   background: #716980;
+   height: 2em;
+   padding-top: .3em;
+   position: relative;
+   top: -.3em;
+   border-radius: .3em .3em 0 0;
+ }
+ .current, a:hover.current, .topmenu li:hover a.current {
+   background: #928aa1;
+   color: #eee;
+   padding-top: .3em;
+   border-radius: .3em .3em 0 0;
+   position: relative;
+   top: -.3em;
+   border-bottom: .3em solid #716980;
+   cursor: default;
+   &:visited {
+     color: #dbdbdb;
+   }
+ }
 
-  .menu-icon {
-    float: right;
-    width: 36px;
-    height: 26px;
-    line-height: 0;
-    padding-top: 10px;
-    text-align: center;
+ /*dropdown menu styles*/
 
-    > svg path {
-      fill: $grey-color-dark;
-    }
-  }
+ .submenu {
+   float: none;
+   background: #716980;
+   width: auto;
+   height: auto;
+   position: absolute;
+   top: 2em;
+   left: -9000em;
+   max-height: 0;
+   -webkit-transition: max-height 0.5s ease-in-out;
+   -moz-transition: max-height 0.5s ease-in-out;
+   -o-transition: max-height 0.5s ease-in-out;
+   -ms-transition: max-height 0.5s ease-in-out;
+   transition: max-height 0.5s ease-in-out;
+ }
 
-  label[for="nav-trigger"] {
+ .submenu li {
+   float: none;
+ }
+
+ .topmenu li:hover ul {
+   left: 0;
+   max-height: 10em;
+ }
+
+ ul.submenu li a {
+   border-bottom: 1px solid white;
+   padding: .2em 1em;
+   white-space: nowrap;
+ }
+ ul.submenu li:last-child a {
+   border-bottom: none;
+ }
+ ul.submenu li a:hover {
+   background: #716980;
+   height: 2em;
+   padding-top: .2em;
+   top: 0;
+   border-radius: 0;
+ }
+
+ /**
+  * Set class default for ul and li
+  */
+  ol.default {
     display: block;
-    float: right;
-    width: 36px;
-    height: 36px;
-    z-index: 2;
-    cursor: pointer;
+    height: auto;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
   }
-
-  input ~ .trigger {
-    clear: both;
-    display: none;
-  }
-
-  input:checked ~ .trigger {
+  ul.default {
+    float: none;
+    background: none;
+    height: auto;
+    width: 100%;
     display: block;
-    padding-bottom: 5px;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+    padding-bottom: 10px;
   }
-
-  .page-link {
-    line-height: $base-line-height;
-    display: block;
-    padding: 5px 10px;
-    color: white;
-
-    @include media-query($on-palm) {
-      color: $grey-color-dark;
-    }
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 0;
-    }
-    margin-left: 20px;
+  li.default {
+    float: none;
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
   }
-
-  @media screen and (min-width: $on-medium) {
-    position: static;
-    float: right;
-    border: none;
-    background-color: inherit;
-
-    label[for="nav-trigger"] {
-      display: none;
-    }
-
-    .menu-icon {
-      display: none;
-    }
-
-    input ~ .trigger {
-      display: block;
-    }
-
-    .page-link {
-      display: inline;
-      padding: 0;
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-      margin-left: auto;
-    }
-  }
-}
 
 
 
@@ -140,6 +156,7 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  background: #fff;
 }
 
 .footer-col-wrapper {
@@ -211,7 +228,7 @@
 .post-list {
   margin-left: 0;
   list-style: none;
-
+  background: transparent;
   > li {
     margin-bottom: $spacing-unit;
   }

@@ -2,26 +2,19 @@
 layout: default
 title: Screening
 ---
-# Manual screening
+# Screening
+
+## Manual screening
 In the systematic review community, the standard method to sort scientific material (such as articles and reports) is via manual screening. In general, this screening process is split into several stages: first titles are screened and the relevant articles kept; then the abstracts are screened for retained articles to see which of those may still be useful; and finally full-text articles are screened. revtools currently supports title and abstract screening only.
 
-## Title screening
+### Title screening
 Title screening is achieved using the function <code>screen_titles</code>. You can run this function without any commands to launch the app in 'empty' mode, allowing you to load data via the 'browse' button; or with an object of class <code>bibliography</code> or <code>data.frame</code>. As with <code>screen duplicates</code>, you get the same app - but slightly different behaviour - depending on how you launch it:
 
 ```
-# 1. standalone; load in data in the app
-screen_titles()
-
-# 2. the same, but save back to workspace on exit
-result <- screen_titles() # ditto,
-
-data <- read_bibliography("my_data.ris") # load in data
-
-# 3. launch the app using data from the workspace
-screen_titles(data)  
-
-# 4. specify an object to return data to
-result <- screen_titles(data)
+screen_titles() # 1. standalone; load in data in the app
+result <- screen_titles() # 2. the same, but save back to workspace on exit
+screen_titles(data) # 3. launch the app using data from the workspace
+result <- screen_titles(data) # 4. specify an object to return data to
 ```
 
 Once you've loaded the app using <code>screen_titles</code>, you will see the 'Data' tab open in the dashboard:
@@ -72,18 +65,18 @@ Once you have loaded the app and added some data, you will be able to manually s
 <img src="/assets/screenshots/screen_titles.png"/>
 
 
-## Abstract screening
+### Abstract screening
 Abstract screening is achieved using the function <code>screen_abstracts</code>. Unlike <code>screen_titles</code>, <code>screen_abstracts</code> only shows data for one article at a time; but the two apps are otherwise identical, with the exception that <code>screen_abstracts</code> allows you to make notes for each article should you wish.
 
 <img src="/assets/screenshots/screen_abstracts.png"/>
 
 
 
-# Screening with topic models
+## Screening with topic models
 
 The main way to investigate the results of a topic model in revtools is via the command <code>screen_topics</code>. This function behaves similarly to the other apps in this package, but it has many more options.
 
-## Selecting data
+### Selecting data
 If you load <code>screen_topics</code> without any data, it will initially look quite empty:
 
 <img src="/assets/screenshots/screen_topics_initial.png"/>
@@ -103,7 +96,7 @@ From here there are a series of stages before you can see the results of your to
   <br>
 Once you have selected your data you are ready to go; but you still don't have a plot to work with. To do that you have to use the 'Model' tab.
 
-## Topic model options
+### Topic model options
 The 'Model' tab has only a few options, but they strongly affect the outcome of the plot displayed by <code>screen_topics</code>, as well as how long the code will take to run. There are three choices:
 
 <div class="clearfix">
@@ -121,21 +114,23 @@ The 'Model' tab has only a few options, but they strongly affect the outcome of 
 </div>
 <br>
 
-## Running the topic model
+### Running the topic model
 One you hit 'Calculate Model', <code>screen_topics</code> first constructs a Document Term Matrix (DTM) from the specified data, and then runs the function <code>make_dtm</code>. This function performs the following transformations:
 
-1. converts all text to lower case
-2. removes punctuation, 'stop words' (defaulting to <code>revwords</code>) and numbers
-3. performs stemming on all words (warning: requires the <code>SnowballC</code> package)
-4. removes all words with <3 letters, <5 appearances, or that are in <1% of documents
-5. replaces stemmed words with the most common 'full' version of that word in the corpus
+<ol class="default">
+  <li class="default">converts all text to lower case</li>
+  <li class="default">removes punctuation, 'stop words' (defaulting to <code>revwords</code>) and numbers</li>
+  <li class="default">performs stemming on all words (warning: requires the <code>SnowballC</code> package)</li>
+  <li class="default">removes all words with <3 letters, <5 appearances, or that are in <1% of documents</li>
+  <li class="default">replaces stemmed words with the most common 'full' version of that word in the corpus</li>
+</ol>
 
 Once the DTM has been constructed, <code>screen_topics</code> runs the specified topic model. This can take a very long time for large corpora, so don't be surprised if you are waiting a while looking at this screen:
 
 <img src="/assets/screenshots/screen_topics_calculating_modal.png"/>
 
 
-## Interpreting the plot
+### Interpreting the plot
 Once the topic model has finished running, it generates a plot known as an 'ordination'. The axes on this plot don't have any implicit meaning, and are unlabelled. Instead, points that are closer together are interpreted as containing similar topics, and therefore similar words. If you hover over a point on this plot, it will show you the title of the paper in question, as well as the highest-weighted topic for that article:
 
 <img src="/assets/screenshots/screen_topics_ordination.png"/>

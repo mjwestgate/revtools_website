@@ -108,6 +108,24 @@ li {
   }
 }
 
+li.normal {
+  float: none;
+  display: inline;
+  background: transparent;
+  padding: 0px;
+}
+
+a.normal {
+  padding: 0px;
+}
+
+a:hover.normal {
+  background: transparent;
+  padding: 0px;
+  top: 0px;
+  border-radius: 0px;
+}
+
 
 
 /**
@@ -171,7 +189,7 @@ code {
   @include relative-font-size(0.9375);
   border: 0px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #feffe8;
+  background-color: #f0f0f0;
 }
 
 code {

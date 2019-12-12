@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Import
+title: Data
 ---
-# Importing data
+# Data
+
+## Accepted formats
 revtools is designed to import bibliographic data; specifically the kinds of files that you can export from academic databases such as Web of Science or Scopus. Alternatively, most bibliographic management software (such as Zotero, Mendeley or EndNote) can export to a range of formats, including <code>.ris</code>.
 
-## read_bibliography
+## Importing to R
 Bibliographic data can be stored in a range of formats with differing properties (with BibTeX and RIS formats among the most common). In revtools, you can use a single function (<code>read_bibliography</code>) to import your data regardless of what file type that data is stored in. This approach differs from other R packages such as <a href="https://cran.r-project.org/package=RefManageR" target="_blank" rel="noopener">RefManageR</a> or <a href="https://cran.r-project.org/package=bibtex" target="_blank" rel="noopener">bibtex</a> that are really good at importing .bib files, but don't support .ris formats. For example, if you had the same data stored in both .bib and .ris formats, then these two commands would give the same result:
 
 ```

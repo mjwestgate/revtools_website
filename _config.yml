@@ -13,8 +13,3 @@ minima:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
-header_pages:
-- introduction.md
-- import.md
-- deduplication.md
-- screening.md

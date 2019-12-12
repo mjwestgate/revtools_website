@@ -5,21 +5,18 @@ layout: default
 <div class="home">
 
   {{ content }}
+  <br>
 
   {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}</a> | {{ post.date | date: date_format }} | <i>{{ post.description }}</i>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
+    {%- for post in site.posts -%}
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}</a> | {{ post.date | date: date_format }} | <i>{{ post.description }}</i>
+          <br><br>
+      {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+      {%- endif -%}
+    {%- endfor -%}
   {%- endif -%}
 
 </div>
